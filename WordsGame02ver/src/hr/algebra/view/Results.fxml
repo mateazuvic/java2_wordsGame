@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-image: url('file:C:/Users/Teodor/Desktop/pozadina1.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.algebra.controller.ResultsController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="tfFirstWord" editable="false" focusTraversable="false" prefWidth="255.0" style="-fx-border-color: silver; -fx-border-width: 4px; -fx-background-color: whitesmoke;" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="70.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lbFirstPoints" layoutX="125.0" layoutY="146.0" prefHeight="60.0" prefWidth="100.0" textFill="#98a2a4" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="146.0">
+               <font>
+                  <Font name="Bauhaus 93" size="40.0" />
+               </font>
+            </Label>
+            <Label text="Ti:" AnchorPane.leftAnchor="70.0">
+               <font>
+                  <Font name="Bauhaus 93" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="tfSecondWord" editable="false" focusTraversable="false" prefWidth="255.0" style="-fx-border-color: silver; -fx-border-width: 4px; -fx-background-color: whitesmoke;" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="70.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lbSecondPoints" layoutX="90.0" layoutY="146.0" prefHeight="60.0" prefWidth="100.0" textAlignment="CENTER" textFill="#98a2a4" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="146.0">
+               <font>
+                  <Font name="Bauhaus 93" size="40.0" />
+               </font>
+            </Label>
+            <Label text="Protivnik:">
+               <font>
+                  <Font name="Bauhaus 93" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="70.0" prefWidth="250.0" text="Rezultati" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="80.0">
+               <font>
+                  <Font name="Bauhaus 93" size="50.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.47159090909090906" centerY="0.5388349514563107" focusAngle="-45.0" focusDistance="0.1707317073170731" radius="0.5731707317073171">
+                     <stops>
+                        <Stop color="#e3dce4" />
+                        <Stop color="#a1aeb2" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <fx:include source="MenuBar.fxml" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnReplay" layoutX="14.0" layoutY="72.0" mnemonicParsing="false" onAction="#replay" text="REPLAY" textFill="#3c3490" AnchorPane.leftAnchor="40.0">
+               <font>
+                  <Font name="Bauhaus 93" size="24.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="taChat" layoutX="180.0" layoutY="3.0" prefHeight="160.0" prefWidth="520.0" style="-fx-border-color: silver; -fx-border-width: 5;" />
+            <TextField fx:id="tfMessage" layoutX="180.0" layoutY="162.0" prefHeight="40.0" prefWidth="520.0" style="-fx-border-color: silver; -fx-border-width: 2; -fx-background-color: whitesmoke;" />
+            <Button layoutX="632.0" layoutY="167.0" mnemonicParsing="false" onAction="#sendMessage" style="-fx-background-color: black;" text="send" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnGoToMenu" layoutX="41.0" layoutY="132.0" minWidth="30.0" mnemonicParsing="false" onAction="#goToMenu" prefHeight="40.0" prefWidth="107.0" text="MENU" textFill="#c31c1c">
+               <font>
+                  <Font name="Bauhaus 93" size="23.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

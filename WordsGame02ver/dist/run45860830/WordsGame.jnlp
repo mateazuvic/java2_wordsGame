@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="WordsGame.jnlp">
+  <information>
+    <title>WordsGame</title>
+    <vendor>Teodor</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="WordsGame.jar" size="52655" download="eager" />
+    <jar href="lib\WordsGameContract.jar" size="3783" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="WordsGame" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="hr.algebra.WordsGameApplication"  name="WordsGame" />
+  <update check="always"/>
+</jnlp>

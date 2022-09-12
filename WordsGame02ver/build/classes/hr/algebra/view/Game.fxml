@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-image: url('file:C:/Users/Teodor/Desktop/pozadina1.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.algebra.controller.GameController">
+   <top>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnSaveWord" maxHeight="60.0" maxWidth="150.0" mnemonicParsing="false" onAction="#onBtnSaveWordClick" prefHeight="50.0" text="POTVRDI" textFill="#1a0fbd" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets top="40.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Bauhaus 93" size="24.0" />
+               </font>
+            </Button>
+            <Label fx:id="lbError" text="X" textFill="#d31f1f" visible="false" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.rowSpan="3" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="30.0" left="120.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnDelete" onAction="#onBtnDeleteClick" prefHeight="42.0" prefWidth="80.0" style="-fx-background-color: #b5bcc7;" text="Obriši" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.rowSpan="3" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="30.0" right="60.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Bauhaus 93" size="18.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.5048543689320388" endY="0.4563106796116505" startX="0.47572815533980584" startY="0.5485436893203883">
+                     <stops>
+                        <Stop color="#514eae" />
+                        <Stop color="#6563c9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Label fx:id="lbWord" prefHeight="65.0" prefWidth="400.0" style="-fx-border-color: #1a0fbd; -fx-border-width: 3px; -fx-background-color: #9fb6d6;" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="45.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" right="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="lbCheck" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" prefWidth="5.0" style="-fx-background-image: url('file:C:/Users/Teodor/Desktop/check.png'); -fx-background-size: stretch;" visible="false" GridPane.rowIndex="4" GridPane.rowSpan="2">
+               <GridPane.margin>
+                  <Insets left="60.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="lbTimer" minHeight="50.0" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #1f3b69; -fx-border-color: whitesmoke;" textFill="#f5f5f5" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="273.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Bauhaus 93" size="26.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </GridPane>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox fx:id="hbLetters1" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2">
+               <children>
+                  <Button fx:id="btnL1" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBtnLetterClick" prefWidth="60.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnL2" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBtnLetterClick" prefWidth="60.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnL3" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBtnLetterClick" prefWidth="60.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnL4" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBtnLetterClick" prefWidth="60.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnL5" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBtnLetterClick" prefWidth="60.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnL6" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBtnLetterClick" prefWidth="60.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+               <GridPane.margin>
+                  <Insets top="15.0" />
+               </GridPane.margin>
+            </HBox>
+            <HBox fx:id="hbLetters2" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <children>
+                  <Button fx:id="btnL7" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBtnLetterClick" prefWidth="60.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnL8" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBtnLetterClick" prefWidth="60.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnL9" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBtnLetterClick" prefWidth="60.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnL10" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBtnLetterClick" prefWidth="60.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnL11" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBtnLetterClick" prefWidth="60.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnL12" maxHeight="40.0" maxWidth="60.0" mnemonicParsing="false" onAction="#onBtnLetterClick" prefWidth="60.0">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="60.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <left>
+      <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#play" prefHeight="64.0" prefWidth="64.0" style="-fx-background-image: url('file:C:/Users/Teodor/Desktop/playbutton.png'); -fx-background-radius: 50;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </left>
+</BorderPane>

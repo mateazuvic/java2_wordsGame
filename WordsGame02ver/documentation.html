@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dokumentacija projekta</title>
+</head>
+<body>
+<h2><b>DOKUMENTACIJA O PROJEKTU</b></h2>
+
+
+<h1><b>Naziv paketa: controller</h1></b>
+
+
+
+<h2>Naziv klase: GameController.java</h2>
+<h2><i>package hr.algebra.controller</h2></i><h3>public GameController</h3><h3>extends java.lang.Object</h3><h3>implements javafx.fxml.Initializable</h3>
+
+<h5>Varijable:</h5>
+<p>private static final java.lang.String hr.algebra.controller.GameController.LETTERS_FILE</p>
+<p>private static final java.lang.String hr.algebra.controller.GameController.WORDS_FILE</p>
+<p>private javafx.scene.control.Label hr.algebra.controller.GameController.lbWord</p>
+<p>private javafx.scene.control.Label hr.algebra.controller.GameController.lbError</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnDelete</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnL1</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnL2</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnL3</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnL4</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnL5</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnL6</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnL7</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnL8</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnL9</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnL10</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnL11</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnL12</p>
+<p>private javafx.scene.control.Label hr.algebra.controller.GameController.lbCheck</p>
+<p>private javafx.scene.control.Label hr.algebra.controller.GameController.lbTimer</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.GameController.btnPlay</p>
+<p>private javafx.scene.control.Button[] hr.algebra.controller.GameController.letterButtons</p>
+<p>private java.lang.String[] hr.algebra.controller.GameController.letterSigns</p>
+<p>private javafx.collections.ObservableList hr.algebra.controller.GameController.clickedLetters</p>
+<p>private hr.algebra.model.Reader hr.algebra.controller.GameController.reader</p>
+<p>private hr.algebra.model.Game hr.algebra.controller.GameController.game</p>
+<p>private java.util.List hr.algebra.controller.GameController.steps</p>
+<p>private java.util.Optional hr.algebra.controller.GameController.foundWord</p>
+<p>private hr.algebra.enums.State hr.algebra.controller.GameController.previousState</p>
+<p>private hr.algebra.model.Player hr.algebra.controller.GameController.player</p>
+<p>private java.io.File hr.algebra.controller.GameController.file</p>
+<p>private java.io.File hr.algebra.controller.GameController.fileSteps</p>
+<p>java.util.List hr.algebra.controller.GameController.desSteps</p>
+<p>java.util.List hr.algebra.controller.GameController.domSteps</p>
+<p>private hr.algebra.model.Word hr.algebra.controller.GameController.finalWord</p>
+<p>private java.lang.String hr.algebra.controller.GameController.randomCombinationOfLetters</p>
+<p>private javafx.collections.ObservableList hr.algebra.controller.GameController.PLAYERS</p>
+<p>private hr.algebra.model.Word hr.algebra.controller.GameController.writtenWord</p>
+<p>private long hr.algebra.controller.GameController.min</p>
+<p>private long hr.algebra.controller.GameController.sec</p>
+<p>private long hr.algebra.controller.GameController.hr</p>
+<p>private long hr.algebra.controller.GameController.totalSec</p>
+<p>private java.util.Timer hr.algebra.controller.GameController.timer</p>
+<p>private static java.lang.String hr.algebra.controller.GameController.nick</p>
+<p>int hr.algebra.controller.GameController.i</p>
+<h5>Metode:</h5>
+<p>private class java.lang.String format(long arg0)</p>
+<p>static void access$100(hr.algebra.controller.GameController arg0)</p>
+<p>static void access$200(hr.algebra.controller.GameController arg0)</p>
+<p>static class java.util.Timer access$300(hr.algebra.controller.GameController arg0)</p>
+<p>static long access$000(hr.algebra.controller.GameController arg0)</p>
+<p>static class javafx.scene.control.Label access$400(hr.algebra.controller.GameController arg0)</p>
+<p>static class java.util.Optional access$500(hr.algebra.controller.GameController arg0)</p>
+<p>static class hr.algebra.model.Player access$600(hr.algebra.controller.GameController arg0)</p>
+<p>static class javafx.scene.control.Button access$700(hr.algebra.controller.GameController arg0)</p>
+<p>public void initialize(java.net.URL arg0, java.util.ResourceBundle arg1)</p>
+<p style="font-size:10px"><b>@javafx.fxml.FXML()</p></b>
+<p>private void play(javafx.event.ActionEvent arg0)</p>
+<p>private void setLettersOnButtons(java.util.List<hr.algebra.model.Letter> arg0, hr.algebra.enums.State arg1)</p>
+<p>private void disableClickedButtons(java.lang.String arg0)</p>
+<p>private class java.lang.String doDoubleLetterCheck(javafx.scene.control.Label arg0)</p>
+<p style="font-size:10px"><b>@javafx.fxml.FXML()</p></b>
+<p>private void onBtnSaveWordClick(javafx.event.ActionEvent arg0)</p>
+<p>private boolean lambda$onBtnSaveWordClick$0(hr.algebra.model.Word arg0)</p>
+<p style="font-size:10px"><b>@javafx.fxml.FXML()</p></b>
+<p>private void onBtnLetterClick(javafx.event.ActionEvent arg0)</p>
+<p>private void convertTime()</p>
+<p>public static class java.lang.String getFileNameDOM()</p>
+<p>private void loadDOM()</p>
+<p>private void saveDOM()</p>
+<p>private void setTimer()</p>
+<p>private void serialize()</p>
+<p>private class hr.algebra.model.Game deserialize()</p>
+<p style="font-size:10px"><b>@javafx.fxml.FXML()</p></b>
+<p>private void onBtnDeleteClick(javafx.event.ActionEvent arg0)</p>
+<p>private void prepareLetters(hr.algebra.model.Reader arg0)</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.controller.GameController()</h5>
+
+
+
+
+
+<h2>Naziv klase: MenuBarController.java</h2>
+<h2><i>package hr.algebra.controller</h2></i><h3>public MenuBarController</h3><h3>extends java.lang.Object</h3><h3>implements javafx.fxml.Initializable</h3>
+
+<h5>Varijable:</h5>
+<p>private static final java.lang.String hr.algebra.controller.MenuBarController.DOCUMENTATION_FILENAME</p>
+<p>private static final java.lang.String hr.algebra.controller.MenuBarController.PACKAGE_LOC</p>
+<p>private static final java.lang.String hr.algebra.controller.MenuBarController.CLASSES_PACKAGE</p>
+<h5>Metode:</h5>
+<p>public void initialize(java.net.URL arg0, java.util.ResourceBundle arg1)</p>
+<p style="font-size:10px"><b>@javafx.fxml.FXML()</p></b>
+<p>private void createDocumentation(javafx.event.ActionEvent arg0)</p>
+<p>private static void appendStartingHtml(java.lang.StringBuilder arg0)</p>
+<p>private static void appendEndingHtml(java.lang.StringBuilder arg0)</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.controller.MenuBarController()</h5>
+
+
+
+
+
+<h2>Naziv klase: MenuController.java</h2>
+<h2><i>package hr.algebra.controller</h2></i><h3>public MenuController</h3><h3>extends java.lang.Object</h3><h3>implements javafx.fxml.Initializable</h3>
+
+<h5>Varijable:</h5>
+<p>private javafx.scene.control.Button hr.algebra.controller.MenuController.btnStart</p>
+<p>private javafx.scene.control.TextField hr.algebra.controller.MenuController.tfNickname</p>
+<p>private hr.algebra.enums.State hr.algebra.controller.MenuController.previousState</p>
+<p>private hr.algebra.model.Player hr.algebra.controller.MenuController.player</p>
+<h5>Metode:</h5>
+<p>public void initialize(java.net.URL arg0, java.util.ResourceBundle arg1)</p>
+<p>private void showMessage()</p>
+<p style="font-size:10px"><b>@javafx.fxml.FXML()</p></b>
+<p>private void handleStartBtn()</p>
+<p style="font-size:10px"><b>@javafx.fxml.FXML()</p></b>
+<p>private void startGame(javafx.event.ActionEvent arg0)</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.controller.MenuController()</h5>
+
+
+
+
+
+<h2>Naziv klase: ResultsController.java</h2>
+<h2><i>package hr.algebra.controller</h2></i><h3>public ResultsController</h3><h3>extends java.lang.Object</h3><h3>implements javafx.fxml.Initializable</h3>
+
+<h5>Varijable:</h5>
+<p>private javafx.scene.control.TextField hr.algebra.controller.ResultsController.tfFirstWord</p>
+<p>private javafx.scene.control.Label hr.algebra.controller.ResultsController.lbFirstPoints</p>
+<p>private javafx.scene.control.TextField hr.algebra.controller.ResultsController.tfSecondWord</p>
+<p>private javafx.scene.control.Label hr.algebra.controller.ResultsController.lbSecondPoints</p>
+<p>private javafx.scene.control.TextArea hr.algebra.controller.ResultsController.taChat</p>
+<p>private javafx.scene.control.TextField hr.algebra.controller.ResultsController.tfMessage</p>
+<p>private javafx.scene.control.Button hr.algebra.controller.ResultsController.btnGoToMenu</p>
+<p>private hr.algebra.model.Word hr.algebra.controller.ResultsController.myWord</p>
+<p>private hr.algebra.model.Player hr.algebra.controller.ResultsController.player</p>
+<p>private hr.algebra.network.ClientThread hr.algebra.controller.ResultsController.ct</p>
+<p>private hr.algebra.contract.service.MessengerService hr.algebra.controller.ResultsController.messangerService</p>
+<p>public static final java.lang.String hr.algebra.controller.ResultsController.PROPERTIES_FILE</p>
+<p>public static final java.lang.String hr.algebra.controller.ResultsController.USERNAME</p>
+<p>public static final java.util.Properties hr.algebra.controller.ResultsController.PROPERTIES</p>
+<p>private int hr.algebra.controller.ResultsController.nbrOfMessages</p>
+<h5>Metode:</h5>
+<p>static int access$100(hr.algebra.controller.ResultsController arg0)</p>
+<p>static void access$200(hr.algebra.controller.ResultsController arg0) throws class java.rmi.RemoteException</p>
+<p>static interface hr.algebra.contract.service.MessengerService access$000(hr.algebra.controller.ResultsController arg0)</p>
+<p>static int access$102(hr.algebra.controller.ResultsController arg0, int arg1)</p>
+<p>public void initialize(java.net.URL arg0, java.util.ResourceBundle arg1)</p>
+<p style="font-size:10px"><b>@javafx.fxml.FXML()</p></b>
+<p>private void goToMenu(javafx.event.ActionEvent arg0)</p>
+<p>public void showWordOpponent(hr.algebra.model.Word arg0)</p>
+<p>public void updateChat()</p>
+<p>private void initChat()</p>
+<p>private void writeAllMessages() throws class java.rmi.RemoteException</p>
+<p style="font-size:10px"><b>@javafx.fxml.FXML()</p></b>
+<p>private void sendMessage(javafx.event.ActionEvent arg0)</p>
+<p>public void showWord(hr.algebra.model.Word arg0)</p>
+<p>private void initClientThread()</p>
+<p style="font-size:10px"><b>@javafx.fxml.FXML()</p></b>
+<p>private void replay(javafx.event.ActionEvent arg0)</p>
+<p>private void lambda$writeAllMessages$0(java.lang.StringBuilder arg0, hr.algebra.contract.model.ChatMessage arg1)</p>
+<p>public void showWordOpponentIfNotShown(hr.algebra.model.Word arg0)</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.controller.ResultsController()</h5>
+
+
+
+
+
+<h1><b>Naziv paketa: enums</h1></b>
+
+
+
+<h2>Naziv klase: LetterSign.java</h2>
+<h2><i>package hr.algebra.enums</h2></i><h3>public final LetterSign</h3><h3>extends java.lang.Enum</h3><h3> java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.a</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.b</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.c</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.č</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.ć</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.d</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.đ</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.dž</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.e</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.f</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.g</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.h</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.i</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.j</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.k</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.l</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.lj</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.m</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.n</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.nj</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.o</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.p</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.r</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.s</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.š</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.t</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.u</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.v</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.z</p>
+<p>public static final hr.algebra.enums.LetterSign hr.algebra.enums.LetterSign.ž</p>
+<p>private static final hr.algebra.enums.LetterSign[] hr.algebra.enums.LetterSign.$VALUES</p>
+<h5>Metode:</h5>
+<p>public static class [Lhr.algebra.enums.LetterSign; values()</p>
+<p>public static class hr.algebra.enums.LetterSign valueOf(java.lang.String arg0)</p>
+<h5>Konstruktori:</h5>
+<h5>private hr.algebra.enums.LetterSign(java.lang.String arg0, int arg1)</h5>
+
+
+
+
+
+<h2>Naziv klase: State.java</h2>
+<h2><i>package hr.algebra.enums</h2></i><h3>public final State</h3><h3>extends java.lang.Enum</h3><h3> java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<p>public static final hr.algebra.enums.State hr.algebra.enums.State.newGame</p>
+<p>public static final hr.algebra.enums.State hr.algebra.enums.State.oldGame</p>
+<p>public static final hr.algebra.enums.State hr.algebra.enums.State.replay</p>
+<p>private static final hr.algebra.enums.State[] hr.algebra.enums.State.$VALUES</p>
+<h5>Metode:</h5>
+<p>public static class [Lhr.algebra.enums.State; values()</p>
+<p>public static class hr.algebra.enums.State valueOf(java.lang.String arg0)</p>
+<h5>Konstruktori:</h5>
+<h5>private hr.algebra.enums.State(java.lang.String arg0, int arg1)</h5>
+
+
+
+
+
+<h1><b>Naziv paketa: holders</h1></b>
+
+
+
+<h2>Naziv klase: PlayerHolder.java</h2>
+<h2><i>package hr.algebra.holders</h2></i><h3>public final PlayerHolder</h3><h3>extends java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<p>private hr.algebra.model.Player hr.algebra.holders.PlayerHolder.player</p>
+<p>private static final hr.algebra.holders.PlayerHolder hr.algebra.holders.PlayerHolder.INSTANCE</p>
+<h5>Metode:</h5>
+<p>public static class hr.algebra.holders.PlayerHolder getInstance()</p>
+<p>public void setPlayer(hr.algebra.model.Player arg0)</p>
+<p>public class hr.algebra.model.Player getPlayer()</p>
+<h5>Konstruktori:</h5>
+<h5>private hr.algebra.holders.PlayerHolder()</h5>
+
+
+
+
+
+<h2>Naziv klase: StateHolder.java</h2>
+<h2><i>package hr.algebra.holders</h2></i><h3>public final StateHolder</h3><h3>extends java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<p>private hr.algebra.enums.State hr.algebra.holders.StateHolder.state</p>
+<p>private static final hr.algebra.holders.StateHolder hr.algebra.holders.StateHolder.INSTANCE</p>
+<h5>Metode:</h5>
+<p>public static class hr.algebra.holders.StateHolder getInstance()</p>
+<p>public class hr.algebra.enums.State getState()</p>
+<p>public void setState(hr.algebra.enums.State arg0)</p>
+<h5>Konstruktori:</h5>
+<h5>private hr.algebra.holders.StateHolder()</h5>
+
+
+
+
+
+<h2>Naziv klase: WordHolder.java</h2>
+<h2><i>package hr.algebra.holders</h2></i><h3>public final WordHolder</h3><h3>extends java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<p>private java.util.Optional hr.algebra.holders.WordHolder.word</p>
+<p>private static final hr.algebra.holders.WordHolder hr.algebra.holders.WordHolder.INSTANCE</p>
+<h5>Metode:</h5>
+<p>public static class hr.algebra.holders.WordHolder getInstance()</p>
+<p>public class java.util.Optional getWord()</p>
+<p>public void setWord(java.util.Optional<hr.algebra.model.Word> arg0)</p>
+<h5>Konstruktori:</h5>
+<h5>private hr.algebra.holders.WordHolder()</h5>
+
+
+
+
+
+<h1><b>Naziv paketa: model</h1></b>
+
+
+
+<h2>Naziv klase: Game.java</h2>
+<h2><i>package hr.algebra.model</h2></i><h3>public Game</h3><h3>extends java.lang.Object</h3><h3>implements java.io.Serializable</h3>
+
+<h5>Varijable:</h5>
+<p>private static final long hr.algebra.model.Game.serialVersionUID</p>
+<p>private javafx.beans.property.ListProperty hr.algebra.model.Game.players</p>
+<p>private javafx.beans.property.ObjectProperty hr.algebra.model.Game.firstWord</p>
+<p>private javafx.beans.property.StringProperty hr.algebra.model.Game.combinationOfLetters</p>
+<p>private javafx.beans.property.LongProperty hr.algebra.model.Game.timer</p>
+<h5>Metode:</h5>
+<p>private void readObject(java.io.ObjectInputStream arg0) throws class java.io.IOException, class java.lang.ClassNotFoundException</p>
+<p>private void writeObject(java.io.ObjectOutputStream arg0) throws class java.io.IOException</p>
+<p>public class java.lang.String getCombinationOfLetters()</p>
+<p>public void setCombinationOfLetters(java.lang.String arg0)</p>
+<p>public long getTimer()</p>
+<p>public void setFirstWord(hr.algebra.model.Word arg0)</p>
+<p>public void setTimer(long arg0)</p>
+<p>public class hr.algebra.model.Word getFirstWord()</p>
+<p>public interface javafx.collections.ObservableList getPlayers()</p>
+<p>public void setPlayers(javafx.collections.ObservableList<hr.algebra.model.Player> arg0)</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.model.Game()</h5>
+
+
+
+<h5>public hr.algebra.model.Game(javafx.collections.ObservableList<hr.algebra.model.Player> arg0, hr.algebra.model.Word arg1, java.lang.String arg2, long arg3)</h5>
+
+
+
+
+
+<h2>Naziv klase: Letter.java</h2>
+<h2><i>package hr.algebra.model</h2></i><h3>public Letter</h3><h3>extends java.lang.Object</h3><h3>implements java.io.Serializable</h3>
+
+<h5>Varijable:</h5>
+<p>private static final long hr.algebra.model.Letter.serialVersionUID</p>
+<p>private javafx.beans.property.ObjectProperty hr.algebra.model.Letter.sign</p>
+<h5>Metode:</h5>
+<p>public class java.lang.String toString()</p>
+<p>private void readObject(java.io.ObjectInputStream arg0) throws class java.io.IOException, class java.lang.ClassNotFoundException</p>
+<p>private void writeObject(java.io.ObjectOutputStream arg0) throws class java.io.IOException</p>
+<p>public void setSign(hr.algebra.enums.LetterSign arg0)</p>
+<p>public class hr.algebra.enums.LetterSign getSign()</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.model.Letter(hr.algebra.enums.LetterSign arg0)</h5>
+
+
+
+
+
+<h2>Naziv klase: Player.java</h2>
+<h2><i>package hr.algebra.model</h2></i><h3>public Player</h3><h3>extends java.lang.Object</h3><h3>implements java.io.Serializable</h3>
+
+<h5>Varijable:</h5>
+<p>private static final long hr.algebra.model.Player.serialVersionUID</p>
+<p>private java.lang.String hr.algebra.model.Player.nickname</p>
+<p>private int hr.algebra.model.Player.points</p>
+<h5>Metode:</h5>
+<p>public class java.lang.String toString()</p>
+<p>private void readObject(java.io.ObjectInputStream arg0) throws class java.io.IOException, class java.lang.ClassNotFoundException</p>
+<p>private void writeObject(java.io.ObjectOutputStream arg0) throws class java.io.IOException</p>
+<p>public void setNickname(java.lang.String arg0)</p>
+<p>public int getPoints()</p>
+<p>public void setPoints(int arg0)</p>
+<p>public class java.lang.String getNickname()</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.model.Player()</h5>
+
+
+
+<h5>public hr.algebra.model.Player(java.lang.String arg0, int arg1)</h5>
+
+
+
+
+
+<h2>Naziv klase: Reader.java</h2>
+<h2><i>package hr.algebra.model</h2></i><h3>public Reader</h3><h3>extends java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<p>private static final java.lang.String hr.algebra.model.Reader.DEL</p>
+<p>private java.util.List hr.algebra.model.Reader.dataFromFile</p>
+<h5>Metode:</h5>
+<p>public class java.lang.String getRandomCombinationOfLetters()</p>
+<p>private interface java.util.List mapFromStringToWord(java.util.List<java.lang.String> arg0)</p>
+<p>public interface java.util.List parseDataToLetters(java.lang.String arg0)</p>
+<p>public void readFile(java.lang.String arg0)</p>
+<p>public interface java.util.List getAllData()</p>
+<p>public class hr.algebra.model.Player readPlayer()</p>
+<p>public class hr.algebra.enums.State readState()</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.model.Reader()</h5>
+
+
+
+
+
+<h2>Naziv klase: Step.java</h2>
+<h2><i>package hr.algebra.model</h2></i><h3>public Step</h3><h3>extends java.lang.Object</h3><h3>implements java.io.Serializable</h3>
+
+<h5>Varijable:</h5>
+<p>private static final long hr.algebra.model.Step.serialVersionUID</p>
+<p>private javafx.beans.property.ObjectProperty hr.algebra.model.Step.writtenWord</p>
+<p>private javafx.beans.property.StringProperty hr.algebra.model.Step.combination</p>
+<h5>Metode:</h5>
+<p>public class java.lang.String toString()</p>
+<p>private void readObject(java.io.ObjectInputStream arg0) throws class java.io.IOException, class java.lang.ClassNotFoundException</p>
+<p>private void writeObject(java.io.ObjectOutputStream arg0) throws class java.io.IOException, class java.lang.Exception</p>
+<p>public void setCombination(java.lang.String arg0)</p>
+<p>public void setWrittenWord(hr.algebra.model.Word arg0)</p>
+<p>public class hr.algebra.model.Word getWrittenWord()</p>
+<p>public class java.lang.String getCombination()</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.model.Step(hr.algebra.model.Word arg0, java.lang.String arg1)</h5>
+
+
+
+
+
+<h2>Naziv klase: Word.java</h2>
+<h2><i>package hr.algebra.model</h2></i><h3>public Word</h3><h3>extends java.lang.Object</h3><h3>implements java.io.Serializable</h3>
+
+<h5>Varijable:</h5>
+<p>private static final long hr.algebra.model.Word.serialVersionUID</p>
+<p>private javafx.beans.property.StringProperty hr.algebra.model.Word.name</p>
+<p>private javafx.beans.property.IntegerProperty hr.algebra.model.Word.length</p>
+<h5>Metode:</h5>
+<p>public class java.lang.String toString()</p>
+<p>public int getLength()</p>
+<p>public class java.lang.String getName()</p>
+<p>private void readObject(java.io.ObjectInputStream arg0) throws class java.io.IOException, class java.lang.ClassNotFoundException</p>
+<p>private void writeObject(java.io.ObjectOutputStream arg0) throws class java.io.IOException</p>
+<p>public void setName(java.lang.String arg0)</p>
+<p>public void setLength(int arg0)</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.model.Word()</h5>
+
+
+
+<h5>public hr.algebra.model.Word(java.lang.String arg0, int arg1)</h5>
+
+
+
+
+
+<h1><b>Naziv paketa: network</h1></b>
+
+
+
+<h2>Naziv klase: ClientThread.java</h2>
+<h2><i>package hr.algebra.network</h2></i><h3>public ClientThread</h3><h3>extends java.lang.Thread</h3><h3> java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<p>private hr.algebra.model.Word hr.algebra.network.ClientThread.wordToSend</p>
+<p>private final hr.algebra.controller.ResultsController hr.algebra.network.ClientThread.controller</p>
+<p>public static final java.lang.String hr.algebra.network.ClientThread.PROPS_FILE</p>
+<p>public static final java.lang.String hr.algebra.network.ClientThread.CLIENT_PORT</p>
+<p>public static final java.lang.String hr.algebra.network.ClientThread.GROUP</p>
+<p>public static final java.util.Properties hr.algebra.network.ClientThread.PROPERTIES</p>
+<h5>Metode:</h5>
+<p>public void run()</p>
+<p>public void trigger(hr.algebra.model.Word arg0)</p>
+<p>private void sendToServer(hr.algebra.model.Word arg0, java.net.MulticastSocket arg1, java.net.InetAddress arg2)</p>
+<p>private void lambda$run$1(hr.algebra.model.Word arg0)</p>
+<p>private void lambda$run$0(hr.algebra.model.Word arg0)</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.network.ClientThread(java.lang.String arg0, hr.algebra.controller.ResultsController arg1)</h5>
+
+
+
+
+
+<h1><b>Naziv paketa: utils</h1></b>
+
+
+
+<h2>Naziv klase: ByteUtils.java</h2>
+<h2><i>package hr.algebra.utils</h2></i><h3>public ByteUtils</h3><h3>extends java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<h5>Metode:</h5>
+<p>public static final int byteArrayToInt(byte[] arg0)</p>
+<p>public static final class [B intToByteArray(int arg0)</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.utils.ByteUtils()</h5>
+
+
+
+
+
+<h2>Naziv klase: DOMUtils.java</h2>
+<h2><i>package hr.algebra.utils</h2></i><h3>public DOMUtils</h3><h3>extends java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<h5>Metode:</h5>
+<p>private static interface org.w3c.dom.Node createElement(org.w3c.dom.Document arg0, java.lang.String arg1, java.lang.String arg2)</p>
+<p>private static void saveDocument(org.w3c.dom.Document arg0, java.lang.String arg1) throws class javax.xml.transform.TransformerException</p>
+<p>private static class hr.algebra.model.Step processStepNode(org.w3c.dom.Element arg0)</p>
+<p>private static interface org.w3c.dom.Document createDocument(java.lang.String arg0) throws class javax.xml.parsers.ParserConfigurationException</p>
+<p>private static interface org.w3c.dom.Document createDocument(java.io.File arg0) throws class org.xml.sax.SAXException, class javax.xml.parsers.ParserConfigurationException, class java.io.IOException</p>
+<p>public static interface java.util.List loadSteps()</p>
+<p>public static void saveSteps(java.util.List<hr.algebra.model.Step> arg0)</p>
+<p>private static interface org.w3c.dom.Node createStepElement(hr.algebra.model.Step arg0, org.w3c.dom.Document arg1)</p>
+<p>private static void lambda$saveSteps$0(org.w3c.dom.Document arg0, hr.algebra.model.Step arg1)</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.utils.DOMUtils()</h5>
+
+
+
+
+
+<h2>Naziv klase: GameUtils.java</h2>
+<h2><i>package hr.algebra.utils</h2></i><h3>public GameUtils</h3><h3>extends java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<h5>Metode:</h5>
+<p>public static transient void startStage(java.net.URL arg0, java.lang.String arg1, hr.algebra.enums.State arg2, hr.algebra.model.Player arg3, java.util.Optional<hr.algebra.model.Word>... arg4) throws class java.io.IOException</p>
+<h5>Konstruktori:</h5>
+<h5>private hr.algebra.utils.GameUtils()</h5>
+
+
+
+
+
+<h2>Naziv klase: MessageUtils.java</h2>
+<h2><i>package hr.algebra.utils</h2></i><h3>public MessageUtils</h3><h3>extends java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<h5>Metode:</h5>
+<p>public static interface java.util.List getAllMessages()</p>
+<p>public static void sendMessage(java.lang.String arg0, java.lang.String arg1)</p>
+<p>public static void showInfoMessage(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)</p>
+<p>public static interface hr.algebra.contract.service.MessengerService getMessengerService()</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.utils.MessageUtils()</h5>
+
+
+
+
+
+<h2>Naziv klase: ReflectionUtils.java</h2>
+<h2><i>package hr.algebra.utils</h2></i><h3>public ReflectionUtils</h3><h3>extends java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<h5>Metode:</h5>
+<p>public static void readClassAndMembersInfo(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)</p>
+<p>private static void appendInterfaces(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)</p>
+<p>private static void appendExceptions(java.lang.reflect.Executable arg0, java.lang.StringBuilder arg1)</p>
+<p>public static void readClassInfo(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)</p>
+<p>private static void appendMethods(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)</p>
+<p>private static void appendPackage(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)</p>
+<p>private static void appendParameters(java.lang.reflect.Executable arg0, java.lang.StringBuilder arg1)</p>
+<p>private static void appendParent(java.lang.Class<?> arg0, java.lang.StringBuilder arg1, boolean arg2)</p>
+<p>private static void appendFields(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)</p>
+<p>private static void appendModifiers(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)</p>
+<p>private static void appendMethodAnnotations(java.lang.reflect.Executable arg0, java.lang.StringBuilder arg1)</p>
+<p>private static void appendConstructors(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)</p>
+<h5>Konstruktori:</h5>
+<h5>public hr.algebra.utils.ReflectionUtils()</h5>
+
+
+
+
+
+<h2>Naziv klase: SerializationUtils.java</h2>
+<h2><i>package hr.algebra.utils</h2></i><h3>public SerializationUtils</h3><h3>extends java.lang.Object</h3><h3>
+
+<h5>Varijable:</h5>
+<p>public static final java.lang.String hr.algebra.utils.SerializationUtils.SER_FILE_NAME</p>
+<p>public static final java.lang.String hr.algebra.utils.SerializationUtils.SER_FILE_NAME_STEPS</p>
+<h5>Metode:</h5>
+<p>public static void write(java.lang.Object arg0, java.lang.String arg1) throws class java.io.IOException</p>
+<p>public static class java.lang.Object read(java.lang.String arg0) throws class java.io.IOException, class java.lang.ClassNotFoundException</p>
+<h5>Konstruktori:</h5>
+<h5>private hr.algebra.utils.SerializationUtils()</h5>
+
+
+
+
+
+<h1><b>Naziv paketa: view</h1></b>
+
+
+
+<h2>Naziv klase: Game.fxml</h2>
+<p>Game.fxml klasa je napisana u XML-u </p>
+
+
+<h2>Naziv klase: Menu.fxml</h2>
+<p>Menu.fxml klasa je napisana u XML-u </p>
+
+
+<h2>Naziv klase: MenuBar.fxml</h2>
+<p>MenuBar.fxml klasa je napisana u XML-u </p>
+
+
+<h2>Naziv klase: Results.fxml</h2>
+<p>Results.fxml klasa je napisana u XML-u </p>
+
+
+</body>
+</html>
